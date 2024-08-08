@@ -6,7 +6,7 @@ class CategorySerializations(serializers.ModelSerializer):
         models=Category
         fields= "__all__"
 
-class Producterializations(serializers.ModelSerializer):
+class ProductSerializer(serializers.ModelSerializer):
     class Meta:
-        models=Product
-        fields= "__all__"
+        model = Product
+        fields = ['id', 'title', 'description', 'Brand', 'img', 'price', 'is_slider', 'is_featured']

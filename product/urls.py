@@ -3,5 +3,8 @@ from .views import *
 
 urlpatterns = [
     path("product/", product_view.as_view({'get':'list'}), name="product" ),
-    path("allproduct/", allProduct.as_view(), name="allproduct" )
+    path("allProduct/", allProduct.as_view(), name="allProduct" ),
+    path("createProduct/", create_product.as_view(), name="createProduct"),
+    path("singleProduct/<int:pk>",updateDelete_product.as_view(), name="single" ),
+    path("updateDelete/<int:pk>",updateDelete_product.as_view(), name="updateDelete" ),
 ]
